@@ -1,0 +1,343 @@
+/* variables declaradas */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --grey: #b8bdc4;
+    --grey2: #f1f5fae7;
+    --blue: #166efa;
+    --imgBanner: url(../img/imgBanner.jpg);
+}
+
+/* general */
+html {
+    font-family: "Playwrite AR", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to top, var(--grey), var(--grey2));
+}
+
+/* titulos h* y párrafos */
+header h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+header h1 span {
+    font-size: 2rem;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    word-break: normal;
+}
+
+/* header */
+.nav {
+    background-color: var(--blue);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav a {
+    color: var(--black);
+    font-size: x-large;
+    text-decoration: none;
+    font-weight: 550;
+}
+
+.nav a:hover {
+    color: var(--white);
+}
+
+.sectionBanner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 2rem;
+    z-index: 1;
+}
+
+.sectionBanner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--imgBanner);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.sectionBanner * {
+    color: var(--white);
+    font-weight: 900;
+}
+
+.sectionBanner h3 {
+    font-size: xx-large;
+}
+
+.sectionBanner img {
+    width: 3rem;
+}
+
+.divUbicacion {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.divUbicacion p {
+    font-size: x-large;
+}
+
+.contacto {
+    text-decoration: none;
+    color: var(--black);
+    background-color: var(--blue);
+    border-color: var(--grey);
+    border-radius: 0.5rem;
+    font-size: large;
+    padding: 0.5rem;
+    width: 8rem;
+    align-self: center;
+}
+
+.contacto:hover {
+    color: var(--white);
+}
+
+/* ------main------ */
+/* section servicios/contacto */
+.sectionServCont {
+    width: 1300px;
+    background-color: var(--white);
+    padding: 1rem;
+    padding-bottom: 3rem;
+    margin: 3rem auto;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 20px 0px var(--black);
+}
+
+.sectionServCont h2 {
+    margin-bottom: -1rem;
+}
+
+/* section servicios */
+.sectionServicios {
+    display: flex;
+    text-align: center;
+}
+
+.servicios {
+    margin: 2rem;
+    width: 33.3%;
+}
+
+.servicios h3 {
+    font-size: x-large;
+}
+
+.servicios p {
+    line-height: 2rem;
+}
+
+.imgServicios {
+    width: 5rem;
+    background-color: var(--blue);
+    padding: 2rem;
+    border-radius: 5rem;
+    overflow: visible;
+}
+
+/* section contacto */
+.sectionContacto h2 {
+    margin-bottom: -1rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 15rem;
+}
+
+input[type="email"] {
+    width: 25rem;
+}
+
+textarea {
+    width: 25rem;
+    height: 10rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 5rem;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 50rem;
+    height: auto;
+    margin: auto;
+    background-color: var(--grey);
+    border: none;
+    box-shadow: 10px 10px 20px 0px var(--black);
+}
+
+fieldset * {
+    justify-self: center;
+    margin-top: 0.5rem;
+}
+
+fieldset div {
+    text-align: center;
+}
+
+/* ------end main------ */
+/* footer */
+footer p {
+    text-align: center;
+}
+
+/* **********media query********** */
+@media screen and (max-width: 1350px) {
+    .sectionServicios {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sectionServCont {
+        width: 800px;
+    }
+
+    fieldset {
+        width: 40rem;
+        height: auto;
+        margin: auto;
+    }
+
+    legend {
+        margin-bottom: 1rem;
+    }
+
+    .servicios {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .divUbicacion {
+        margin-top: -2rem;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sectionServicios {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sectionServCont {
+        width: 450px;
+    }
+
+    fieldset {
+        width: 100px;
+        height: auto;
+        margin: auto;
+    }
+
+    textarea {
+        width: 20rem;
+        height: 10rem;
+    }
+
+    .divNomTel {
+        display: flex;
+        flex-direction: column;
+    }
+
+    legend {
+        margin-bottom: 1rem;
+    }
+
+    input[type="email"] {
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .sectionServicios {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sectionServCont {
+        width: 250px;
+    }
+
+    legend {
+        margin-bottom: 1rem;
+    }
+
+    fieldset {
+        width: 200px;
+        height: auto;
+        margin: auto;
+    }
+
+    input {
+        width: 10rem;
+    }
+
+    textarea {
+        width: 10rem;
+        height: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    input[type="email"] {
+        width: 10rem;
+    }
+}
