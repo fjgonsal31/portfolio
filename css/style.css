@@ -9,15 +9,9 @@
 }
 
 /* general */
-html {
-    font-family: "Playwrite AR", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    scroll-behavior: smooth;
-}
-
 body {
+    font-family: "Open Sans", sans-serif;
+    scroll-behavior: smooth;
     background: linear-gradient(to top, var(--grey), var(--grey2));
 }
 
