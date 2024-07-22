@@ -9,7 +9,7 @@
 }
 
 /* general */
-body {
+html {
     font-family: "Open Sans", sans-serif;
     scroll-behavior: smooth;
     background: linear-gradient(to top, var(--grey), var(--grey2));
