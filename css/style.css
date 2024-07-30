@@ -114,6 +114,7 @@ p {
     padding: 0.5rem;
     width: 8rem;
     align-self: center;
+    cursor: pointer;
 }
 
 .contacto:hover {
@@ -123,7 +124,7 @@ p {
 /* ------main------ */
 /* section servicios/contacto */
 .sectionServCont {
-    width: 1600px;
+    width: 80rem;
     background-color: var(--white);
     padding: 1rem;
     padding-bottom: 3rem;
@@ -182,16 +183,21 @@ p {
     background-color: var(--white);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 325px;
-    max-height: 533px;
+    width: 17rem;
+    height: 25rem;
     display: flex;
     flex-direction: column;
 }
 
+.divTrabajos div h3 {
+    margin: 1rem 1rem 0.5rem 1rem;
+}
+
 .divTrabajos div p {
     text-align: justify;
-    padding: 1rem;
-    height: 8%;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0;
+    height: 3rem;
 }
 
 .divTrabajos div img {
@@ -275,6 +281,8 @@ footer p {
 
 /* **********media query********** */
 @media screen and (max-width: 1350px) {
+
+    /* servicios */
     .sectionServicios {
         display: flex;
         flex-direction: column;
@@ -282,9 +290,29 @@ footer p {
     }
 
     .sectionServCont {
-        width: 800px;
+        width: 50rem;
     }
 
+    /* trabajos */
+    .divTrabajos {
+        grid-template-columns: auto auto auto;
+    }
+
+    .divTrabajos div {
+        width: 13rem;
+        height: 20.8rem;
+    }
+
+    .divTrabajos div img {
+        height: 50%;
+    }
+
+    .divTrabajos div p {
+        text-align: center;
+        font-size: 0.85rem;
+    }
+
+    /* form */
     fieldset {
         width: 40rem;
         height: auto;
@@ -301,6 +329,8 @@ footer p {
 }
 
 @media screen and (max-width: 850px) {
+
+    /* header */
     .divUbicacion {
         margin-top: -2rem;
     }
@@ -317,6 +347,7 @@ footer p {
         align-items: center;
     }
 
+    /* servicios */
     .sectionServicios {
         display: flex;
         flex-direction: column;
@@ -324,11 +355,22 @@ footer p {
     }
 
     .sectionServCont {
-        width: 450px;
+        width: 26rem;
     }
 
+    /* trabajos */
+    .divTrabajos {
+        grid-template-columns: auto auto;
+    }
+
+    .divTrabajos div {
+        width: 12rem;
+        margin: 0.5rem;
+    }
+
+    /* form */
     fieldset {
-        width: 100px;
+        width: 6.25rem;
         height: auto;
         margin: auto;
     }
@@ -353,6 +395,8 @@ footer p {
 }
 
 @media screen and (max-width: 470px) {
+
+    /* servicios */
     .sectionServicios {
         display: flex;
         flex-direction: column;
@@ -360,15 +404,32 @@ footer p {
     }
 
     .sectionServCont {
-        width: 250px;
+        width: 16.5rem;
+        padding-left: 0;
+        padding-right: 0;
     }
 
+    .servicios p {
+        line-height: 1.5rem;
+        text-align: center;
+    }
+
+    /* trabajos */
+    .divTrabajos {
+        grid-template-columns: auto;
+    }
+
+    .divTrabajos div {
+        width: 14rem;
+    }
+
+    /* form */
     legend {
         margin-bottom: 1rem;
     }
 
     fieldset {
-        width: 200px;
+        width: 12.5rem;
         height: auto;
         margin: auto;
     }
